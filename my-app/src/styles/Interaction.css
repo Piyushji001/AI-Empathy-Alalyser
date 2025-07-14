@@ -1,0 +1,164 @@
+/* src/styles/Interaction.css */
+.interaction-page-container {
+  padding: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Add Interaction Page */
+.add-interaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.add-interaction-form .form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.add-interaction-form textarea.form-input {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.add-interaction-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.record-button, .save-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.record-button {
+  background-color: #3B82F6;
+}
+.record-button:hover {
+  background-color: #2563EB;
+}
+.record-button.is-listening {
+  background-color: #EF4444;
+}
+.record-button.is-listening:hover {
+  background-color: #DC2626;
+}
+
+.save-button {
+  background-color: #10B981;
+}
+.save-button:hover {
+  background-color: #059669;
+}
+.save-button:disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+}
+
+/* Analysis Detail Page */
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.analysis-header .score-display {
+  text-align: right;
+}
+.analysis-header .score-display p {
+  margin: 0;
+  color: #6B7280;
+}
+.analysis-header .score-display .score {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #3B82F6;
+}
+
+.analysis-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .analysis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.transcript-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+.transcript-line {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.transcript-line.teacher {
+  background-color: #DBEAFE; /* blue-100 */
+}
+.transcript-line.student {
+  background-color: #F3F4F6; /* gray-100 */
+}
+.transcript-line .speaker {
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+.transcript-line .text {
+    margin: 0;
+}
+
+.feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.feedback-list-item {
+  background-color: #F0FDF4; /* green-50 */
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.feedback-list-item svg {
+    color: #10B981; /* green-500 */
+    flex-shrink: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  background-color: #E5E7EB;
+  color: #374151;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+.back-link:hover {
+    background-color: #D1D5DB;
+}

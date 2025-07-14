@@ -1,0 +1,19 @@
+### Create a new interaction
+# @name createInteraction
+POST http://127.0.0.1:8000/interactions/
+Content-Type: application/json
+
+{
+  "studentName": "Anjali Singh",
+  "transcript": [
+    { "speaker": "Teacher", "text": "Anjali, your progress in the last month has been fantastic. Keep it up!" },
+    { "speaker": "Student", "text": "Thank you so much, that means a lot!" },
+    { "speaker": "Teacher", "text": "I can see you are working hard, but you seem to be struggling with the new topic." },
+    { "speaker": "Student", "text": "Yes, it's a bit difficult." },
+    { "speaker": "Teacher", "text": "That's completely okay. Let's work on it together." }
+  ]
+}
+
+### Analyze the interaction created above
+POST http://127.0.0.1:8000/analyze/{{createInteraction.response.body._id}}
+Content-Type: application/json
