@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+motor
+passlib[bcrypt]
+python-dotenv
+pydantic
+pydantic_core
+transformers
+torch
